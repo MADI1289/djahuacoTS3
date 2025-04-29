@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="djahuacoTS2.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Label Text="Nombre del Estudiante" FontAttributes="Bold"/>
+            <Picker x:Name="pickerEstudiante">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Andrea</x:String>
+                        <x:String>Brayan</x:String>
+                        <x:String>Carlos</x:String>
+                        <x:String>Diana</x:String>
+                        <x:String>Esteban</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Text="Nota Seguimiento 1 (sobre 10)" />
+            <Entry x:Name="notaSeg1" Keyboard="Numeric"/>
+
+            <Label Text="Examen 1 (sobre 10)" />
+            <Entry x:Name="examen1" Keyboard="Numeric"/>
+
+            <Label Text="Nota Seguimiento 2 (sobre 10)" />
+            <Entry x:Name="notaSeg2" Keyboard="Numeric"/>
+
+            <Label Text="Examen 2 (sobre 10)" />
+            <Entry x:Name="examen2" Keyboard="Numeric"/>
+
+            <Label Text="Fecha" />
+            <DatePicker x:Name="fechaPicker" />
+
+            <Button Text="Calcular Nota Final" Clicked="OnCalcularClicked"/>
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>
